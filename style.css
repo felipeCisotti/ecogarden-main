@@ -572,7 +572,7 @@ label {
   display: block;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .et-hero-tabs-container,
   .banner{
     display: 	none;
