@@ -577,9 +577,7 @@ header{
 }
 
 @media (max-width: 768px) {
-  .et-hero-tabs-container,
-  .banner{
-    display: 	none;
-  }
-  
+  .et-hero-tabs{
+    display: none;
+  }  
 }
