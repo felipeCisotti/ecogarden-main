@@ -577,4 +577,10 @@ label {
   .banner{
     display: 	none;
   }
+    .top-bar,
+  .menu-icon,
+  .mobile-menu {
+    display: none;
+}
+
 }
