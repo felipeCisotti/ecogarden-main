@@ -573,14 +573,6 @@ label {
 }
 
 @media (min-width: 768px) {
-  .top-bar,
-  .menu-icon,
-  .mobile-menu {
-
-  }
-}
-
-@media (max-width: 768px) {
   .et-hero-tabs-container,
   .banner{
     display: 	none;
