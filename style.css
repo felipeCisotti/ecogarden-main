@@ -572,15 +572,14 @@ label {
   display: block;
 }
 
+header{
+  display: none;
+}
+
 @media (max-width: 768px) {
   .et-hero-tabs-container,
   .banner{
     display: 	none;
   }
-    .top-bar,
-  .menu-icon,
-  .mobile-menu {
-    display: none;
-}
-
+  
 }
