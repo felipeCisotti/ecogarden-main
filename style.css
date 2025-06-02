@@ -578,3 +578,12 @@ label {
     display: 	none;
   }
 }
+
+@media (min-width: 768px) {
+  .top-bar,
+  .menu-icon,
+  .mobile-menu {
+    display: none;
+}
+
+}
