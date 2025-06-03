@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="shortcut icon" href="eco.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+            <link rel="shortcut icon" href="/eco.png" type="image/x-icon">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 
 
@@ -22,39 +26,20 @@
     <i class="fa fa-whatsapp"></i>
   </a>
 
-
-
-  <header>
-    <div class="top-bar">
-
-      <!-- Ícone de menu -->
-      <div class="menu-icon" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-
-    <!-- Menu suspenso -->
-    <nav class="mobile-menu" id="mobileMenu">
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Serviços</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Contatos</a></li>
-      </ul>
-    </nav>
+   <header>
+    <i class="fas fa-bars menu-btn" id="menuBtn"></i>
   </header>
 
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
+  <nav id="mobileMenu">
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
 
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
-    });
-  </script>
-
+<div class="inicio">
   <section class="et-hero-tabs">
     <video class="banner" src="banner.mp4" autoplay muted loop playsinline></video>
 
@@ -67,6 +52,14 @@
       <span class="et-hero-tab-slider"></span>
     </div>
   </section>
+
+  </div>
+
+  <div class="logo-centro">
+    <img src="ecogarden-removebg-preview.png" alt="">
+  </div>
+
+  
 
   <section class="carrossel" id="carrossel">
     <div id="carouselExample" class="carousel slide">
@@ -374,6 +367,24 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+
+      // Alterna ícone entre barras e X
+      if (menuBtn.classList.contains('fa-bars')) {
+        menuBtn.classList.remove('fa-bars');
+        menuBtn.classList.add('fa-xmark');
+      } else {
+        menuBtn.classList.remove('fa-xmark');
+        menuBtn.classList.add('fa-bars');
+      }
+    });
   </script>
 </body>
 

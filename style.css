@@ -580,69 +580,92 @@ details p {
   padding: 1rem;
 }
 
-.menu-icon {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  /* Aumenta o espaço entre as linhas */
-  cursor: pointer;
-  padding: 10px;
-  transform: scale(1.5);
-  /* Aumenta o tamanho geral */
+@media (max-width: 768px) {
+    .et-hero-tabs{
+      display: none;
+    }
+
+    header {
+      background-color: #3f4e22;
+      color: white;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1rem;
+      position: relative;
+    }
+
+    .menu-btn {
+      font-size: 28px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    nav {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #3f4e22;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+
+    nav.active {
+      max-height: 500px;
+      opacity: 1;
+      z-index: 1001;
+    }
+
+    nav ul {
+      list-style: none;
+      text-align: center;
+    }
+
+    nav ul li {
+      padding: 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ccc;
+    }
+
+    .logo-centro{
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+    }
+    .logo-centro img{
+      width: 350px;
+    }
+
+    .form-group{
+      display: none;
+    }
 }
 
-.menu-icon span {
-  width: 50px;
-  /* Largura maior */
-  height: 5px;
-  /* Espessura maior */
-  background-color: white;
-  display: flex;
-
-  border-radius: 2px;
-}
-
-/* Menu suspenso (oculto por padrão) */
-.mobile-menu {
-  background-color: #3f4e22;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  display: none;
-  text-align: center;
-  z-index: 999;
-
-}
 
 
-.mobile-menu ul {
-  list-style: none;
-}
+    /* Oculta botão no desktop */
+@media (min-width: 768px) {
+  header{
+    display: none;
+  }
 
-.mobile-menu ul li {
-  display: flex;
-  justify-content: center;
-  
-  padding: 1rem;
-}
+  nav{
+    display: none;
+  }
 
-.mobile-menu ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 3rem;
-}
-
-/* Quando ativo, mostrar menu */
-.mobile-menu.active {
-  display: block;
-}
-
-header {
-  display: none;
-}
-
-@media (max-width: 576px) {
-  .et-hero-tabs {
+  .logo-centro{
     display: none;
   }
 }
