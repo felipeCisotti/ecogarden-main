@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kits de Jardinagem</title>
     <link rel="stylesheet" href="/paginadecompras/comprasjardinagem/comprasjardinagem.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -18,6 +19,25 @@
             <a href="#">Terra e Substratos</a>
             <a href="#">Pedras</a>
             <a href="#">Contato</a>
+        </nav>
+
+        <div class="menu-icon" id="menuToggle">
+            <i class="fas fa-bars" id="menuIcon"></i>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </div>
+
+        <!-- Menu suspenso -->
+        <nav class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#">Kit de Jardinagem</a></li>
+                <li><a href="#">Adubos</a></li>
+                <li><a href="#">Terra e Substratos</a></li>
+                <li><a href="#">Pedras</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -166,6 +186,32 @@
         </div>
         </section>
         </div>
+
+                <div class="footer-bottom" data-aos="fade-up">
+            <div class="copy">
+                ©Copyright 2025 - EcoGarden Todos os direitos reservados - Desenvolvido por CODEVERSE
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const menuIcon = document.getElementById('menuIcon');
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+
+            // Alterna ícone entre menu e X
+            if (menuIcon.classList.contains('fa-bars')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+    </script>
     </main>
 
 </body>
