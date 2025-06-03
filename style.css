@@ -580,7 +580,7 @@ details p {
   padding: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px)  {
     .et-hero-tabs{
       display: none;
     }
@@ -676,9 +676,15 @@ details p {
     .cont{
       display: none;
     }
-    .final{
+
+    .footer-mob{
+      margin-top: 100px;
+    }
+
+    .pc{
       display: none;
     }
+
 }
 
 
