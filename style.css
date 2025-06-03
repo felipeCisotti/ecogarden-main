@@ -620,7 +620,10 @@ details p {
 }
 
 .mobile-menu ul li {
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  
+  padding: 1rem;
 }
 
 .mobile-menu ul li a {
