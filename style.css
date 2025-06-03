@@ -432,11 +432,14 @@ button:active {
   animation: scroll 20s linear infinite;
 }
 
+
+/*
 .carousel-track img {
   width: 200px;
   height: auto;
   margin-right: 20px;
 }
+  */
 
 @keyframes scroll {
   0% {
@@ -715,5 +718,87 @@ details p {
 
   .footer-mob{
     display: none;
+  }
+}
+
+/******Área para estilização do Carrossel Mobile*******-*/
+
+
+
+.carrossel-mobile {
+  display: none;
+}
+
+/*  Em telas <= 768px (mobile), escondemos o carrossel e mostramos o carrossel-mobile` */
+@media (max-width: 768px) {
+ 
+  .carrossel {
+    display: none;
+  }
+  /* mostra o carrossel-mobile */
+  .carrossel-mobile {
+    display: block;      
+    padding: 10px;       
+  }
+  
+  
+}
+
+/* Telas <=  769px (desktop) carrossel continue visível */
+/*    e o mobile  oculto              */
+@media (min-width: 769px) {
+  .carrossel {
+    display: block;    
+  }
+  .carrossel-mobile {
+    display: none;
+  }
+}
+
+/* ajuste do carrossel*/
+
+
+
+/*  Uma altura mínima para o contêiner inteiro */
+.carousel {
+  min-height: 300px;       
+  overflow: hidden;        
+}
+
+
+.carousel-track {
+  display: flex;
+  align-items: center;     
+  
+  min-height: 250px;       
+}
+
+
+.carousel-track img {
+  max-height: 250px;       
+                             
+  width: auto;             
+  object-fit: contain;     
+  margin-right: 20px;     
+}
+
+
+.carousel-track img {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+/*  Ajuste  para mobile */
+@media (max-width: 768px) {
+  .carousel {
+    min-height: 180px;     /* menor em mobile */
+  }
+  .carousel-track {
+    min-height: 180px;
+  }
+  .carousel-track img {
+    max-height: 160px;     /* reduz a altura máxima em mobile */
   }
 }
