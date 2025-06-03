@@ -156,7 +156,7 @@
   color: #4A5C24;
 }
 
-#card:hover {
+.card:hover {
   box-shadow: #402E19 0px 3px 8px;
   transform: scale(1.05);
   transition: all .3s ease;
@@ -648,7 +648,28 @@ details p {
       width: 350px;
     }
 
-    .form-group{
+    .paisagem-pc{
+      display: none;
+    }
+
+    .categorias{
+      display: none;
+    }
+
+    .categorias-cll{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      background-color: #4A5C24;
+      padding: 20px;
+    }
+
+    #formulario{
+      display: none;
+    }
+
+    #enviar{
       display: none;
     }
 }
@@ -666,6 +687,14 @@ details p {
   }
 
   .logo-centro{
+    display: none;
+  }
+  
+  .paisagem-cll{
+    display: none;
+  }
+
+  .categorias-cll{
     display: none;
   }
 }
