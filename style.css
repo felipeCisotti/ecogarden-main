@@ -436,13 +436,11 @@ button:active {
 }
 
 
-/*
 .carousel-track img {
-  width: 200px;
-  height: auto;
+  width: 100px;
+  height: 10px;
   margin-right: 20px;
 }
-  */
 
 @keyframes scroll {
   0% {
@@ -722,6 +720,7 @@ details p {
   .footer-mob{
     display: none;
   }
+
 }
 
 /******Área para estilização do Carrossel Mobile*******-*/
