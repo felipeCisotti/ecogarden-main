@@ -183,9 +183,12 @@
   padding: 30px;
 }
 
+.icon-desc{
+  margin-top: 10px;
+}
+
 .icon {
   width: 200px;
-
 }
 
 .icon img {

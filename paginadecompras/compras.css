@@ -283,6 +283,7 @@ header {
   .filtros {
     display: none;
   }
+  
 
   .top-nav a{
     display: none;
@@ -361,6 +362,7 @@ header {
 .copy {
   color: #4A5C24;
 }
+
 }
 
 @media (min-width: 768px) {
@@ -389,6 +391,8 @@ header {
 .copy {
   color: #4A5C24;
 }
+
+
 }
 
 .btn-whatsapp {
