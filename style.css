@@ -681,14 +681,18 @@ details p {
       display: none;
     }
 
-    .footer-mob{
-      margin-top: 100px;
-    }
 
     .pc{
       display: none;
     }
 
+    .forms{
+      display: none;
+    }
+
+    .marcas-section{
+      display: none;
+    }
 
 }
 
@@ -721,6 +725,7 @@ details p {
     display: none;
   }
 
+
 }
 
 /******Área para estilização do Carrossel Mobile*******-*/
@@ -748,7 +753,7 @@ details p {
 
 /* Telas <=  769px (desktop) carrossel continue visível */
 /*    e o mobile  oculto              */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .carrossel {
     display: block;    
   }
