@@ -448,15 +448,12 @@ button:active {
 }
 
 
-<<<<<<< HEAD
-
-=======
 .carousel-track img {
   width: 100px;
   height: 10px;
   margin-right: 20px;
 }
->>>>>>> 805793221a9f062e724bb7cf2776bf7822bd0664
+
 
 @keyframes scroll {
   0% {
