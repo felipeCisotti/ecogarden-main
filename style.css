@@ -17,6 +17,19 @@
   padding: 0 8em;
 }
 
+.cale{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  flex: 1;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+}
 
 .et-hero-tabs-container {
   display: flex;
@@ -414,10 +427,11 @@ button:active {
   padding: 40px 20px;
 }
 
+
 .marcas-section h2 {
   font-size: 22px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   color: #4A5C24;
 }
 
@@ -425,24 +439,16 @@ button:active {
 .carousel {
   overflow: hidden;
   width: 100%;
-  background: #4A5C24;
   padding: 10px 10px;
 }
 
 .carousel-track {
   display: flex;
-  width: calc(200px * 8);
   animation: scroll 20s linear infinite;
 }
 
 
-/*
-.carousel-track img {
-  width: 200px;
-  height: auto;
-  margin-right: 20px;
-}
-  */
+
 
 @keyframes scroll {
   0% {
@@ -455,13 +461,11 @@ button:active {
 }
 
 
-.carousel img {
+#carousel img {
   width: 120px;
   height: auto;
-  background: #fff;
-  border: 1px solid #eee;
+  border: 3px solid #4A5C24;
   border-radius: 6px;
-  padding: 10px;
 }
 
 footer {
