@@ -448,7 +448,15 @@ button:active {
 }
 
 
+<<<<<<< HEAD
 
+=======
+.carousel-track img {
+  width: 100px;
+  height: 10px;
+  margin-right: 20px;
+}
+>>>>>>> 805793221a9f062e724bb7cf2776bf7822bd0664
 
 @keyframes scroll {
   0% {
@@ -687,14 +695,18 @@ details p {
       display: none;
     }
 
-    .footer-mob{
-      margin-top: 100px;
-    }
 
     .pc{
       display: none;
     }
 
+    .forms{
+      display: none;
+    }
+
+    .marcas-section{
+      display: none;
+    }
 
 }
 
@@ -726,6 +738,8 @@ details p {
   .footer-mob{
     display: none;
   }
+
+
 }
 
 /******Área para estilização do Carrossel Mobile*******-*/
@@ -753,7 +767,7 @@ details p {
 
 /* Telas <=  769px (desktop) carrossel continue visível */
 /*    e o mobile  oculto              */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .carrossel {
     display: block;    
   }
