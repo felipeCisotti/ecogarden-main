@@ -759,6 +759,13 @@ details p {
     padding: 10px;       
   }
   
+  .banner-pc{
+    display: none;
+  }
+
+  .banner-cll{
+
+  }
   
 }
 
@@ -770,6 +777,14 @@ details p {
   }
   .carrossel-mobile {
     display: none;
+  }
+
+  .banner-cll{
+    display: none;
+  }
+
+  .banner-pc{
+    padding: 10px;
   }
 }
 
@@ -808,15 +823,9 @@ details p {
   padding: 10px;
 }
 
-/*  Ajuste  para mobile */
-@media (max-width: 768px) {
-  .carousel {
-    min-height: 180px;     /* menor em mobile */
-  }
-  .carousel-track {
-    min-height: 180px;
-  }
-  .carousel-track img {
-    max-height: 160px;     /* reduz a altura máxima em mobile */
-  }
+
+
+.banner-blog img{
+  width: 100%;
+  margin-bottom: 100px;
 }
