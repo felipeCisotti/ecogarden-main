@@ -24,13 +24,6 @@
     
         }
 
-        :root {
-         --verde-escuro: #4A5C24;
-         --verde-claro: #5B7536;
-         --bege: #D9D8D2;
-         --marrom-escuro: #262014;
-         --marrom-claro: #402E19;
-        }
         
         .logo{
             height: 100px;

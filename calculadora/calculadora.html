@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardim Sustentável - Calculadora Verde e Teste de Perfil</title>
+   <link rel="stylesheet" href="calculadora.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="img/ecogarden (2).PNG" alt=""></div>
+
+         <nav>
+        <ul>
+            <li><a href="#inicio"><i class="fas fa-home"></i> Início</a></li>
+            <li><a href="#dicas"><i class="fas fa-calculator"></i> Calculadora</a></li>
+            <li><a href="#art"><i class="fas fa-book"></i> Teste</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <main class="container">
+        <section id="calculadora">
+            <div class="card">
+                <h2>Calculadora Verde</h2>
+
+                <p>Descubra quantas plantas purificadoras de ar são ideais para o seu espaço:</p>
+                
+                <div class="form-group">
+                    <label for="area">Área do ambiente (m²):</label>
+                    <input type="number" id="area" min="1" placeholder="Ex: 20">
+                </div>
+                
+                <div class="form-group">
+                    <label for="teto">Altura do teto (m):</label>
+                    <input type="number" id="teto" min="1" step="0.1" placeholder="Ex: 2.5">
+                </div>
+                
+                <div class="form-group">
+                    <label for="qualidade-ar">Qualidade atual do ar:</label>
+                    <select id="qualidade-ar">
+                        <option value="boa">Boa</option>
+                        <option value="moderada">Moderada</option>
+                        <option value="ruim">Ruim</option>
+                        <option value="muito-ruim">Muito ruim</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pessoas">Número de pessoas que frequentam o ambiente:</label>
+                    <input type="number" id="pessoas" min="1" placeholder="Ex: 3">
+                </div>
+                
+                <button onclick="calcularPlantas()">Calcular</button>
+                
+                <div id="resultado">
+                    <h3>Resultado:</h3>
+                    <p id="quantidade-plantas"></p>
+                    <p id="recomendacoes"></p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="teste-perfil">
+            <div class="card">
+                  <h2>Teste de Perfil de Jardim</h2>
+
+                <p>Responda às perguntas abaixo para descobrir qual estilo de jardim combina mais com você!</p>
+                
+                <div id="quiz-container">
+                    <div class="quiz-question" id="q1">
+                        <h3>1. Qual desses ambientes você mais gosta?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option" onclick="selectOption(this, 'q1')">Uma praia tropical com palmeiras</div>
+                            <div class="quiz-option" onclick="selectOption(this, 'q1')">Uma cabana rústica no campo</div>
+                            <div class="quiz-option" onclick="selectOption(this, 'q1')">Um mosteiro zen japonês</div>
+                            <div class="quiz-option" onclick="selectOption(this, 'q1')">Um apartamento moderno e minimalista</div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-question" id="q2">
+                        <h3>2. Que cores você prefere em um jardim?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option" onclick="selectOption(this, 'q2')">Cores vibrantes e exóticas</div>
+                            <div class="quiz-option" onclick="selectOption(this, 'q2')">Tons terrosos e naturais</div>
+                            <div class="quiz-option" onclick="selectOption(this, 'q2')">Verdes profundos com alguns acentos</div>
+                            <div class="quiz-option" onclick="selectOption(this, 'q2')">Monocromático ou poucas cores</div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-question" id="q3">
+                        <h3>3. Quanto tempo você pode dedicar à manutenção?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option" onclick="selectOption(this, 'q3')">Pouco tempo (plantas resistentes)</div>
+                            <div class="quiz-option" onclick="selectOption(this, 'q3')">Tempo moderado (alguns cuidados)</div>
+                            <div class="quiz-option" onclick="selectOption(this, 'q3')">Bastante tempo (plantas que exigem atenção)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-question" id="q4">
+                        <h3>4. Qual o propósito principal do seu jardim?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option" onclick="selectOption(this, 'q4')">Relaxamento e meditação</div>
+                            <div class="quiz-option" onclick="selectOption(this, 'q4')">Produção de alimentos/ervas</div>
+                            <div class="quiz-option" onclick="selectOption(this, 'q4')">Beleza e decoração</div>
+                            <div class="quiz-option" onclick="selectOption(this, 'q4')">Atrair vida selvagem</div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-question" id="q5">
+                        <h3>5. Que tipo de elemento você gostaria de incluir?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option" onclick="selectOption(this, 'q5')">Água (fontes, lagos)</div>
+                            <div class="quiz-option" onclick="selectOption(this, 'q5')">Madeira rústica e pedras</div>
+                            <div class="quiz-option" onclick="selectOption(this, 'q5')">Estruturas modernas e limpas</div>
+                            <div class="quiz-option" onclick="selectOption(this, 'q5')">Muitas plantas floridas</div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="calcularResultadoQuiz()">Descobrir meu estilo</button>
+                    
+                    <div id="quiz-result">
+                        <h3>Seu estilo de jardim ideal é: <span id="estilo-jardim"></span></h3>
+                        <div class="garden-style" id="tropical" style="display:none;">
+                            <div class="resul-cont">
+                                <div class="resul-texto">
+                                    <p><strong>Jardim Tropical</strong>: Cheio de folhagens exuberantes, cores vibrantes e plantas que remetem a climas tropicais. Ideal para quem gosta de um ambiente alegre e cheio de vida.</p>
+                                    <p><strong>Plantas recomendadas:</strong> Palmeiras, bromélias, helicônias, orquídeas.</p>
+                                </div>
+                                <div class="frente"><img src="/img/resul/1.png" alt="Jardim Tropical"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="garden-style" id="rustico" style="display:none;">
+                            <div class="resul-cont">
+                                <div class="resul-texto">
+                                    <p><strong>Jardim Rústico</strong>: Com elementos naturais como madeira e pedra, plantas resistentes e um ar campestre. Perfeito para quem busca conexão com a natureza simples e autêntica.</p>
+                                    
+                                   <p><strong>Plantas recomendadas:</strong> Lavanda, alecrim, hortênsias, roseiras.</p>
+                                    
+                                </div>
+                                <div class="frente"><img src="/img/resul/2.png" alt="Jardim Rústico"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="garden-style" id="zen" style="display:none;">
+                            <div class="resul-cont">
+                                <div class="resul-texto">
+                                    <p><strong>Jardim Zen</strong>: Minimalista e harmonioso, com espaços de meditação, pedras e plantas que transmitem paz. Ideal para quem busca tranquilidade e equilíbrio.</p>
+                                    <p><strong>Plantas recomendadas:</strong> Bonsais, bambu, musgo, acers.</p>
+                                </div>
+                                <div class="frente"><img src="/img/resul/3.png" alt="Jardim Zen"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="garden-style" id="minimalista" style="display:none;">
+                            <div class="resul-cont">
+                                <div class="resul-texto">
+                                    <p><strong>Jardim Minimalista</strong>: Linhas limpas, poucas plantas mas bem selecionadas, e muito espaço. Perfeito para quem prefere um visual moderno e sem excessos.</p>
+                                    <p><strong>Plantas recomendadas: </strong>Cactos, suculentas, zamioculca, espada-de-são-jorge.</p>
+                                </div>
+                                <div class="frente"><img src="/img/resul/4.png" alt="Jardim Minimalista"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <script>
+        
+        function calcularPlantas() {
+            const area = parseFloat(document.getElementById('area').value);
+            const teto = parseFloat(document.getElementById('teto').value);
+            const qualidadeAr = document.getElementById('qualidade-ar').value;
+            const pessoas = parseInt(document.getElementById('pessoas').value);
+            
+            if (!area || !teto || !pessoas) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+            
+            const volume = area * teto;
+            let basePlantas = volume / 10; 
+            
+            switch(qualidadeAr) {
+                case 'moderada':
+                    basePlantas *= 1.2;
+                    break;
+                case 'ruim':
+                    basePlantas *= 1.5;
+                    break;
+                case 'muito-ruim':
+                    basePlantas *= 2;
+                    break;
+            }
+            
+            basePlantas += pessoas * 0.5;
+            
+            const plantasNecessarias = Math.ceil(basePlantas);
+            
+            document.getElementById('quantidade-plantas').innerHTML = 
+                `Você precisa de aproximadamente <strong>${plantasNecessarias} plantas</strong> para melhorar a qualidade do ar neste ambiente.`;
+            
+            let recomendacoes = "<strong>Plantas recomendadas:</strong> ";
+            
+            if (plantasNecessarias <= 5) {
+                recomendacoes += "Espada-de-São-Jorge, Lírio-da-Paz, Palmeira-Ráfis, Zamioculca e Jiboia.";
+            } else if (plantasNecessarias <= 10) {
+                recomendacoes += "Além das anteriores, considere Clorofito, Antúrio, Dracena e Hera Inglesa.";
+            } else {
+                recomendacoes += "Combine várias espécies como Areca-Bambu, Ficus, Samambaia, Costela-de-Adão e diversas suculentas.";
+            }
+            
+            document.getElementById('recomendacoes').innerHTML = recomendacoes;
+            document.getElementById('resultado').style.display = 'block';
+        }
+        
+        const respostas = {};
+        
+        function selectOption(option, question) {
+            const options = document.querySelectorAll(`#${question} .quiz-option`);
+            options.forEach(opt => opt.classList.remove('selected'));
+            
+            option.classList.add('selected');
+            
+            respostas[question] = option.textContent;
+        }
+        
+        function calcularResultadoQuiz() {
+            const questions = document.querySelectorAll('.quiz-question');
+            let todasRespondidas = true;
+            
+            questions.forEach(q => {
+                if (!respostas[q.id]) {
+                    todasRespondidas = false;
+                }
+            });
+            
+            if (!todasRespondidas) {
+                alert("Por favor, responda todas as perguntas antes de ver o resultado.");
+                return;
+            }
+            
+            let tropical = 0, rustico = 0, zen = 0, minimalista = 0;
+            
+            for (const [pergunta, resposta] of Object.entries(respostas)) {
+                if (resposta.includes("tropical") || resposta.includes("vibrantes") || resposta.includes("exóticas") || resposta.includes("floridas")) {
+                    tropical++;
+                }
+                
+                if (resposta.includes("rústica") || resposta.includes("campo") || resposta.includes("terrosos") || resposta.includes("madeira") || resposta.includes("ervas")) {
+                    rustico++;
+                }
+                
+                if (resposta.includes("zen") || resposta.includes("meditação") || resposta.includes("relaxamento") || resposta.includes("água") || resposta.includes("harmonioso")) {
+                    zen++;
+                }
+                
+                if (resposta.includes("moderno") || resposta.includes("minimalista") || resposta.includes("monocromático") || resposta.includes("poucas cores") || resposta.includes("limpas")) {
+                    minimalista++;
+                }
+            }
+            
+            // Determinar o estilo com maior pontuação
+            const estilos = [
+                {nome: "Tropical", pontos: tropical},
+                {nome: "Rústico", pontos: rustico},
+                {nome: "Zen", pontos: zen},
+                {nome: "Minimalista", pontos: minimalista}
+            ];
+            
+            estilos.sort((a, b) => b.pontos - a.pontos);
+            const estiloVencedor = estilos[0].nome.toLowerCase();
+            
+            // Exibir resultado
+            document.getElementById('estilo-jardim').textContent = estilos[0].nome;
+            
+            // Esconder todos os estilos primeiro
+            document.querySelectorAll('.garden-style').forEach(style => {
+                style.style.display = 'none';
+            });
+            
+            // Mostrar apenas o estilo vencedor
+            document.getElementById(estiloVencedor).style.display = 'block';
+            document.getElementById('quiz-result').style.display = 'block';
+            
+            // Rolagem suave para o resultado
+            document.getElementById('quiz-result').scrollIntoView({behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
