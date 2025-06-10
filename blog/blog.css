@@ -4,6 +4,14 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+        :root {
+         --verde-escuro: #4A5C24;
+         --verde-claro: #5B7536;
+         --bege: #D9D8D2;
+         --marrom-escuro: #262014;
+         --marrom-claro: #402E19;
+        }
         
         body {
             background-color: #f5f5f5;
