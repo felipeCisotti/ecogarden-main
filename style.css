@@ -17,7 +17,7 @@
   padding: 0 8em;
 }
 
-.cale{
+.cale {
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -196,7 +196,7 @@
   padding: 30px;
 }
 
-.icon-desc{
+.icon-desc {
   margin-top: 10px;
 }
 
@@ -376,7 +376,7 @@ button:active {
 }
 
 
-.btn-submit{
+.btn-submit {
   width: 100px;
   padding: 10px;
   background-color: #5A752C;
@@ -388,6 +388,7 @@ button:active {
   cursor: pointer;
   align-self: flex-start;
 }
+
 .faq-section {
   max-width: 700px;
   margin: 50px auto;
@@ -595,144 +596,145 @@ details p {
   padding: 1rem;
 }
 
-@media (max-width: 768px)  {
-    .et-hero-tabs{
-      display: none;
-    }
+@media (max-width: 768px) {
+  .et-hero-tabs {
+    display: none;
+  }
 
-    header {
-      background-color: #3f4e22;
-      color: white;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 1rem;
-      position: relative;
-    }
+  header {
+    background-color: #3f4e22;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+  }
 
-    .menu-btn {
-      font-size: 28px;
-      cursor: pointer;
-      z-index: 1001;
-    }
+  .menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1001;
+  }
 
-    nav {
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background-color: #3f4e22;
-      overflow: hidden;
-      max-height: 0;
-      opacity: 0;
-      transition: max-height 0.4s ease, opacity 0.4s ease;
-    }
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #3f4e22;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+  }
 
-    nav.active {
-      max-height: 500px;
-      opacity: 1;
-      z-index: 1001;
-    }
+  nav.active {
+    max-height: 500px;
+    opacity: 1;
+    z-index: 1001;
+  }
 
-    nav ul {
-      list-style: none;
-      text-align: center;
-    }
+  nav ul {
+    list-style: none;
+    text-align: center;
+  }
 
-    nav ul li {
-      padding: 1rem;
-    }
+  nav ul li {
+    padding: 1rem;
+  }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: color 0.3s ease;
-    }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
 
-    nav ul li a:hover {
-      color: #ccc;
-    }
+  nav ul li a:hover {
+    color: #ccc;
+  }
 
-    .logo-centro{
-      display: flex;
-      justify-content: center;
-      margin-top: 100px;
-    }
-    .logo-centro img{
-      width: 350px;
-    }
+  .logo-centro {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
 
-    .paisagem-pc{
-      display: none;
-    }
+  .logo-centro img {
+    width: 350px;
+  }
 
-    .categorias{
-      display: none;
-    }
+  .paisagem-pc {
+    display: none;
+  }
 
-    .categorias-cll{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      background-color: #4A5C24;
-      padding: 20px;
-    }
+  .categorias {
+    display: none;
+  }
 
-    #formulario{
-      display: none;
-    }
+  .categorias-cll {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: #4A5C24;
+    padding: 20px;
+  }
 
-    #enviar{
-      display: none;
-    }
+  #formulario {
+    display: none;
+  }
 
-    .cont{
-      display: none;
-    }
+  #enviar {
+    display: none;
+  }
+
+  .cont {
+    display: none;
+  }
 
 
-    .pc{
-      display: none;
-    }
+  .pc {
+    display: none;
+  }
 
-    .forms{
-      display: none;
-    }
+  .forms {
+    display: none;
+  }
 
-    .marcas-section{
-      display: none;
-    }
+  .marcas-section {
+    display: none;
+  }
 
 }
 
 
 
 
-    /* Oculta botão no desktop */
+/* Oculta botão no desktop */
 @media (min-width: 768px) {
-  header{
+  header {
     display: none;
   }
 
-  nav{
+  nav {
     display: none;
   }
 
-  .logo-centro{
-    display: none;
-  }
-  
-  .paisagem-cll{
+  .logo-centro {
     display: none;
   }
 
-  .categorias-cll{
+  .paisagem-cll {
     display: none;
   }
 
-  .footer-mob{
+  .categorias-cll {
+    display: none;
+  }
+
+  .footer-mob {
     display: none;
   }
 
@@ -749,42 +751,27 @@ details p {
 
 /*  Em telas <= 768px (mobile), escondemos o carrossel e mostramos o carrossel-mobile` */
 @media (max-width: 768px) {
- 
+
   .carrossel {
     display: none;
   }
+
   /* mostra o carrossel-mobile */
   .carrossel-mobile {
-    display: block;      
-    padding: 10px;       
+    display: block;
+    padding: 10px;
   }
-  
-  .banner-pc{
-    display: none;
-  }
-
-  .banner-cll{
-
-  }
-  
 }
 
 /* Telas <=  769px (desktop) carrossel continue visível */
 /*    e o mobile  oculto              */
 @media (min-width: 768px) {
   .carrossel {
-    display: block;    
+    display: block;
   }
+
   .carrossel-mobile {
     display: none;
-  }
-
-  .banner-cll{
-    display: none;
-  }
-
-  .banner-pc{
-    padding: 10px;
   }
 }
 
@@ -794,25 +781,25 @@ details p {
 
 /*  Uma altura mínima para o contêiner inteiro */
 .carousel {
-  min-height: 300px;       
-  overflow: hidden;        
+  min-height: 300px;
+  overflow: hidden;
 }
 
 
 .carousel-track {
   display: flex;
-  align-items: center;     
-  
-  min-height: 250px;       
+  align-items: center;
+
+  min-height: 250px;
 }
 
 
 .carousel-track img {
-  max-height: 250px;       
-                             
-  width: auto;             
-  object-fit: contain;     
-  margin-right: 20px;     
+  max-height: 250px;
+
+  width: auto;
+  object-fit: contain;
+  margin-right: 20px;
 }
 
 
@@ -823,9 +810,29 @@ details p {
   padding: 10px;
 }
 
+.blog-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 90px;
+  margin-bottom: -60px;
+}
 
+.blog-icons h2 {
+  font-size: 22px;
+  color: #717336;
+  font-weight: bold;
+}
 
-.banner-blog img{
-  width: 100%;
-  margin-bottom: 100px;
+.icons img {
+  width: 60px;
+  margin: 0 20px;
+  margin-top: 20px;
+  transition: all .5s ease;
+}
+
+.icons img:hover {
+  transform: translateY(-7px);
+  transition: all .5s ease;
 }
