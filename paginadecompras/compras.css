@@ -556,3 +556,25 @@ header {
       text-align: center;
       display: inline-block;
     }
+
+    .tamanhos{
+      display: flex;
+      justify-content: start;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .tamanhos p {
+      color: #D9D8D2;
+      background-color: #4A5C24;
+      padding: 5px;
+      border-radius: 5px;
+      box-shadow: #402E19 0px 2px 8px 0px;
+        transition: all .5s ease;
+    }
+
+    .tamanhos p:hover{
+      cursor: pointer;
+        transform: translateY(-7px);
+        transition: all .5s ease;
+    }
