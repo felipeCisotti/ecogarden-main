@@ -281,6 +281,9 @@
             .dicas-container, .galeria-container {
                 grid-template-columns: 1fr;
             }
+            .carousel{
+                display: none;
+            }
         }
 
 .dica-card {
