@@ -12,10 +12,18 @@ class StickyNavigation {
 		$(window).resize(() => { this.onResize(); });
 	}
 
+	}
+
 	onTabClick(event, element) {
-		event.preventDefault();
-		let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1;
-		$('html, body').animate({ scrollTop: scrollTop }, 600);
+    const href = element.attr('href');
+    
+    // Se for um link âncora (#), faz scroll suave
+    if (href.startsWith('#')) {
+        event.preventDefault();
+        let scrollTop = $(href).offset().top - this.tabContainerHeight + 1;
+        $('html, body').animate({ scrollTop: scrollTop }, 600);
+    }
+    // Se for um link normal (/calendario/...), deixa abrir normalmente
 	}
 
 	onScroll() {

@@ -274,8 +274,57 @@
             .dicas-container, .galeria-container {
                 grid-template-columns: 1fr;
             }
+
+            .carousel{
+                display: none;
+            }
+
+            .topo{
+                left: 30px;
+            }
         }
 
+
+        /* From Uiverse.io by alexroumi */ 
+.topo {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  z-index: 1000;
+  background: #e8e8e8;
+  position: fixed; /* Mudança de relative para fixed */
+  bottom: 20px;     /* Distância do fundo */
+  left: 1300px;       /* Distância da esquerda */
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.topo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+}
+
+.topo a:hover {
+  color: #e8e8e8;
+}
+
+.topo:hover::before {
+  width: 100%;
+}
 .dica-card {
   perspective: 1000px;
   width: 100%;
