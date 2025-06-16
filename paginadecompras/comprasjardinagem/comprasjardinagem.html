@@ -218,28 +218,327 @@
                 ©Copyright 2025 - EcoGarden Todos os direitos reservados - Desenvolvido por CODEVERSE
             </div>
         </div>
-    </main>
+    
+    <div class="modal-overlay" id="modal">
+      <div class="close-btn" onclick="closeModal('modal')">×</div>
+      <div class="modal">
+        <div class="modal-image" style="background-image: url(adubos/2.jpg);">
+        </div>
+        <div class="modal-content">
+          <div>
+            <div class="modal-title">Adubo Orgânico (Húmus de Minhoca)</div>
+            <div class="modal-description">
+              Fertilizante 100% natural, ideal para hortas, vasos e jardins. Rico em nutrientes, melhora o solo,
+              fortalece as raízes e promove o crescimento saudável das plantas. Fácil de usar e totalmente ecológico.
+            </div>
+            <div class="catego">
+              <h3>Selecione o tamanho do produto desejado</h3>
+              <div class="tamanhos">
+                <p>3 KG</p>
+                <p>5 KG</p>
+                <p>10 KG</p>
+                <p>15 KG</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-buttons">
+            <button class="btn">Comprar
+            </button>
+            <div class="btn">
+              <button class="counter-btn" onclick="changeQuantity(-1)">−</button>
+              <span class="quantity" id="quantity">1</span>
+              <button class="counter-btn" onclick="changeQuantity(1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <script>
-        const menuIcon = document.getElementById('menuIcon');
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
+    <div class="modal-overlay" id="modal2">
+      <div class="close-btn" onclick="closeModal('modal2')">×</div>
+      <div class="modal">
+        <div class="modal-image" style="background-image: url(adubos/5.jpg);">
+        </div>
+        <div class="modal-content">
+          <div>
+            <div class="modal-title">Adubo Bokashi — Fermentado, melhora a vida do solo.</div>
+            <div class="modal-description">
+              Rico em microrganismos benéficos, ele acelera a decomposição da matéria orgânica,
+              fortalece as raízes e melhora a estrutura e a fertilidade do solo.
+            </div>
+                        <div class="catego">
+              <h3>Selecione o tamanho do produto desejado</h3>
+              <div class="tamanhos">
+                <p>3 KG</p>
+                <p>5 KG</p>
+                <p>10 KG</p>
+                <p>15 KG</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-buttons">
+            <button class="btn">Comprar
+            </button>
+            <div class="btn">
+              <button class="counter-btn" onclick="changeQuantity(-1)">−</button>
+              <span class="quantity" id="quantity">1</span>
+              <button class="counter-btn" onclick="changeQuantity(1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
+    <div class="modal-overlay" id="modal3">
+      <div class="close-btn" onclick="closeModal('modal3')">×</div>
+      <div class="modal">
+        <div class="modal-image" style="background-image: url(adubos/8.jpg);">
+        </div>
+        <div class="modal-content">
+          <div>
+            <div class="modal-title">Adubo Bokashi — Fermentado, melhora a vida do solo.</div>
+            <div class="modal-description">
+              Rico em microrganismos benéficos, ele acelera a decomposição da matéria orgânica,
+              fortalece as raízes e melhora a estrutura e a fertilidade do solo.
+            </div>
+                        <div class="catego">
+              <h3>Selecione o tamanho do produto desejado</h3>
+              <div class="tamanhos">
+                <p>3 KG</p>
+                <p>5 KG</p>
+                <p>10 KG</p>
+                <p>15 KG</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-buttons">
+            <button class="btn">Comprar
+            </button>
+            <div class="btn">
+              <button class="counter-btn" onclick="changeQuantity(-1)">−</button>
+              <span class="quantity" id="quantity">1</span>
+              <button class="counter-btn" onclick="changeQuantity(1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            // Alterna ícone entre menu e X
-            if (menuIcon.classList.contains('fa-bars')) {
-                menuIcon.classList.remove('fa-bars');
-                menuIcon.classList.add('fa-xmark');
-            } else {
-                menuIcon.classList.remove('fa-xmark');
-                menuIcon.classList.add('fa-bars');
-            }
-        });
-    </script>
-    </main>
+    <div class="modal-overlay" id="modal4">
+      <div class="close-btn" onclick="closeModal('modal4')">×</div>
+      <div class="modal">
+        <div class="modal-image" style="background-image: url(adubos/11.jpg);">
+        </div>
+        <div class="modal-content">
+          <div>
+            <div class="modal-title">Adubo Bokashi — Fermentado, melhora a vida do solo.</div>
+            <div class="modal-description">
+              Rico em microrganismos benéficos, ele acelera a decomposição da matéria orgânica,
+              fortalece as raízes e melhora a estrutura e a fertilidade do solo.
+            </div>
+                        <div class="catego">
+              <h3>Selecione o tamanho do produto desejado</h3>
+              <div class="tamanhos">
+                <p>3 KG</p>
+                <p>5 KG</p>
+                <p>10 KG</p>
+                <p>15 KG</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-buttons">
+            <button class="btn">Comprar
+            </button>
+            <div class="btn">
+              <button class="counter-btn" onclick="changeQuantity(-1)">−</button>
+              <span class="quantity" id="quantity">1</span>
+              <button class="counter-btn" onclick="changeQuantity(1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="modal-overlay" id="modal5">
+      <div class="close-btn" onclick="closeModal('modal5')">×</div>
+      <div class="modal">
+        <div class="modal-image" style="background-image: url(adubos/14.jpg);">
+        </div>
+        <div class="modal-content">
+          <div>
+            <div class="modal-title">Adubo Bokashi — Fermentado, melhora a vida do solo.</div>
+            <div class="modal-description">
+              Rico em microrganismos benéficos, ele acelera a decomposição da matéria orgânica,
+              fortalece as raízes e melhora a estrutura e a fertilidade do solo.
+            </div>
+                        <div class="catego">
+              <h3>Selecione o tamanho do produto desejado</h3>
+              <div class="tamanhos">
+                <p>3 KG</p>
+                <p>5 KG</p>
+                <p>10 KG</p>
+                <p>15 KG</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-buttons">
+            <button class="btn">Comprar
+            </button>
+            <div class="btn">
+              <button class="counter-btn" onclick="changeQuantity(-1)">−</button>
+              <span class="quantity" id="quantity">1</span>
+              <button class="counter-btn" onclick="changeQuantity(1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal6">
+      <div class="close-btn" onclick="closeModal('modal6')">×</div>
+      <div class="modal">
+        <div class="modal-image" style="background-image: url(adubos/17.jpg);">
+        </div>
+        <div class="modal-content">
+          <div>
+            <div class="modal-title">Adubo Bokashi — Fermentado, melhora a vida do solo.</div>
+            <div class="modal-description">
+              Rico em microrganismos benéficos, ele acelera a decomposição da matéria orgânica,
+              fortalece as raízes e melhora a estrutura e a fertilidade do solo.
+            </div>
+                        <div class="catego">
+              <h3>Selecione o tamanho do produto desejado</h3>
+              <div class="tamanhos">
+                <p>3 KG</p>
+                <p>5 KG</p>
+                <p>10 KG</p>
+                <p>15 KG</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-buttons">
+            <button class="btn">Comprar
+            </button>
+            <div class="btn">
+              <button class="counter-btn" onclick="changeQuantity(-1)">−</button>
+              <span class="quantity" id="quantity">1</span>
+              <button class="counter-btn" onclick="changeQuantity(1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal7">
+      <div class="close-btn" onclick="closeModal('modal7')">×</div>
+      <div class="modal">
+        <div class="modal-image" style="background-image: url(adubos/20.jpg);">
+        </div>
+        <div class="modal-content">
+          <div>
+            <div class="modal-title">Adubo Bokashi — Fermentado, melhora a vida do solo.</div>
+            <div class="modal-description">
+              Rico em microrganismos benéficos, ele acelera a decomposição da matéria orgânica,
+              fortalece as raízes e melhora a estrutura e a fertilidade do solo.
+            </div>
+                        <div class="catego">
+              <h3>Selecione o tamanho do produto desejado</h3>
+              <div class="tamanhos">
+                <p>3 KG</p>
+                <p>5 KG</p>
+                <p>10 KG</p>
+                <p>15 KG</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-buttons">
+            <button class="btn">Comprar
+            </button>
+            <div class="btn">
+              <button class="counter-btn" onclick="changeQuantity(-1)">−</button>
+              <span class="quantity" id="quantity">1</span>
+              <button class="counter-btn" onclick="changeQuantity(1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal8">
+      <div class="close-btn" onclick="closeModal('modal8')">×</div>
+      <div class="modal">
+        <div class="modal-image" style="background-image: url(adubos/23.jpg);">
+        </div>
+        <div class="modal-content">
+          <div>
+            <div class="modal-title">Adubo Bokashi — Fermentado, melhora a vida do solo.</div>
+            <div class="modal-description">
+              Rico em microrganismos benéficos, ele acelera a decomposição da matéria orgânica,
+              fortalece as raízes e melhora a estrutura e a fertilidade do solo.
+            </div>
+                        <div class="catego">
+              <h3>Selecione o tamanho do produto desejado</h3>
+              <div class="tamanhos">
+                <p>3 KG</p>
+                <p>5 KG</p>
+                <p>10 KG</p>
+                <p>15 KG</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-buttons">
+            <button class="btn">Comprar
+            </button>
+            <div class="btn">
+              <button class="counter-btn" onclick="changeQuantity(-1)">−</button>
+              <span class="quantity" id="quantity">1</span>
+              <button class="counter-btn" onclick="changeQuantity(1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    const menuIcon = document.getElementById('menuIcon');
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+
+      // Alterna ícone entre menu e X
+      if (menuIcon.classList.contains('fa-bars')) {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+      } else {
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      }
+    });
+  </script>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+  </script>
+
+  <script>
+    let quantity = 1;
+    const quantityDisplay = document.getElementById('quantity');
+
+    function changeQuantity(amount) {
+      quantity = Math.max(1, quantity + amount);
+      quantityDisplay.textContent = quantity;
+    }
+  </script>
 </body>
 
 </html>

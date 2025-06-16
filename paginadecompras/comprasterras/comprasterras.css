@@ -10,31 +10,6 @@ body {
   color: #2e2e2e;
 }
 
-.btn-whatsapp {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px;
-  right: 40px;
-  background-color: #25d366;
-  color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 1px 1px 2px #888;
-  z-index: 1000;
-}
-
-.fa-whatsapp {
-  margin-top: 16px;
-}
-
-
-.btn-whatsapp:hover {
-  transform: translateY(-7px);
-  transition: all 0.5s ease;
-}
-
 /* Topo */
 header {
   background-color: #4b5c20;
@@ -308,6 +283,7 @@ header {
   .filtros {
     display: none;
   }
+  
 
   .top-nav a{
     display: none;
@@ -386,6 +362,7 @@ header {
 .copy {
   color: #4A5C24;
 }
+
 }
 
 @media (min-width: 768px) {
@@ -414,4 +391,262 @@ header {
 .copy {
   color: #4A5C24;
 }
+
 }
+@media (max-width: 768px) {
+  .modal {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-image {
+    display: none; /* OCULTA A IMAGEM NO MOBILE */
+  }
+
+  .modal-content {
+    padding: 20px;
+    flex: none;
+    background-color: #D9D8D2;
+  }
+
+  .modal-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .modal-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+
+  .modal-buttons {
+  display: flex;
+  flex-direction: row; /* Um ao lado do outro */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-buttons .btn {
+  flex: 1;
+  min-width: 120px;
+  height: 55px;
+}
+
+
+  .btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .tamanhos {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .tamanhos p {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .close-btn {
+    top: 10px;
+    right: 15px;
+    font-size: 26px;
+  }
+}
+
+
+.btn-whatsapp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 1px 1px 2px #888;
+  z-index: 1000;
+}
+
+.fa-whatsapp {
+  margin-top: 16px;
+}
+
+
+.btn-whatsapp:hover {
+  transform: translateY(-7px);
+  transition: all 0.5s ease;
+}
+
+
+    /* Modal Overlay */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    /* Modal Content */
+    .modal {
+      background: #D9D8D2 ;
+      display: flex;
+      width: 900px;
+      max-width: 95%;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Left (Image) */
+    .modal-image {
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
+    }
+
+    /* Right (Content) */
+    .modal-content {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #4A5C24;
+    }
+
+    .modal-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .modal-description {
+      flex-grow: 1;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .modal-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .buy-btn {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .cart-btn {
+      background-color: #2196F3;
+      color: white;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+
+
+  .btn {
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  font-weight: bold;
+  color: #4b5c20;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.022);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: #4A5C24;
+  box-shadow: 0px 5px 10px #4A5C24;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+    .counter-btn {
+      background-color: #eee;
+      border: none;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      
+    }
+
+    .counter-btn:hover {
+      background-color: #ccc;
+    }
+
+    .quantity {
+      font-size: 18px;
+      min-width: 20px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .tamanhos{
+      display: flex;
+      justify-content: start;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .tamanhos p {
+      color: #D9D8D2;
+      background-color: #4A5C24;
+      padding: 5px;
+      border-radius: 5px;
+      box-shadow: #4A5C24 0px 2px 8px 0px;
+        transition: all .5s ease;
+    }
+
+    .tamanhos p:hover{
+      cursor: pointer;
+        transform: translateY(-7px);
+        transition: all .5s ease;
+    }

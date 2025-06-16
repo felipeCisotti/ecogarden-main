@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <div class="logo"><img src="img/ecogarden (2).PNG" alt=""></div>
+        <div class="logo"><img src="/calculadora/resultado/ecogarden (2).PNG" alt=""></div>
 
          <nav>
         <ul>
@@ -128,21 +128,23 @@
                                     <p><strong>Jardim Tropical</strong>: Cheio de folhagens exuberantes, cores vibrantes e plantas que remetem a climas tropicais. Ideal para quem gosta de um ambiente alegre e cheio de vida.</p>
                                     <p><strong>Plantas recomendadas:</strong> Palmeiras, bromélias, helicônias, orquídeas.</p>
                                 </div>
-                                <div class="frente"><img src="/img/resul/1.png" alt="Jardim Tropical"></div>
+                                <div class="frente"><img src="/calculadora/resultado/1.png" alt="Jardim Tropical"></div>
                             </div>
                         </div>
-                        
+
+
                         <div class="garden-style" id="rustico" style="display:none;">
                             <div class="resul-cont">
                                 <div class="resul-texto">
-                                    <p><strong>Jardim Rústico</strong>: Com elementos naturais como madeira e pedra, plantas resistentes e um ar campestre. Perfeito para quem busca conexão com a natureza simples e autêntica.</p>
+                                <p><strong>Jardim Rústico</strong>: Com elementos naturais como madeira e pedra, plantas resistentes e um ar campestre. Perfeito para quem busca conexão com a natureza simples e autêntica.</p>
                                     
                                    <p><strong>Plantas recomendadas:</strong> Lavanda, alecrim, hortênsias, roseiras.</p>
-                                    
                                 </div>
-                                <div class="frente"><img src="/img/resul/2.png" alt="Jardim Rústico"></div>
+                                <div class="frente"><img src="/calculadora/resultado/2.png" alt="Jardim Tropical"></div>
                             </div>
                         </div>
+                        
+                        
                         
                         <div class="garden-style" id="zen" style="display:none;">
                             <div class="resul-cont">
@@ -150,7 +152,7 @@
                                     <p><strong>Jardim Zen</strong>: Minimalista e harmonioso, com espaços de meditação, pedras e plantas que transmitem paz. Ideal para quem busca tranquilidade e equilíbrio.</p>
                                     <p><strong>Plantas recomendadas:</strong> Bonsais, bambu, musgo, acers.</p>
                                 </div>
-                                <div class="frente"><img src="/img/resul/3.png" alt="Jardim Zen"></div>
+                                <div class="frente"><img src="/calculadora/resultado/3.png" alt="Jardim Zen"></div>
                             </div>
                         </div>
                         
@@ -160,7 +162,7 @@
                                     <p><strong>Jardim Minimalista</strong>: Linhas limpas, poucas plantas mas bem selecionadas, e muito espaço. Perfeito para quem prefere um visual moderno e sem excessos.</p>
                                     <p><strong>Plantas recomendadas: </strong>Cactos, suculentas, zamioculca, espada-de-são-jorge.</p>
                                 </div>
-                                <div class="frente"><img src="/img/resul/4.png" alt="Jardim Minimalista"></div>
+                                <div class="frente"><img src="/calculadora/resultado/4.png" alt="Jardim Minimalista"></div>
                             </div>
                         </div>
                     </div>
@@ -171,7 +173,7 @@
     
 
     <script>
-        
+
         function calcularPlantas() {
             const area = parseFloat(document.getElementById('area').value);
             const teto = parseFloat(document.getElementById('teto').value);
@@ -218,79 +220,100 @@
             document.getElementById('recomendacoes').innerHTML = recomendacoes;
             document.getElementById('resultado').style.display = 'block';
         }
+    
         
-        const respostas = {};
-        
-        function selectOption(option, question) {
-            const options = document.querySelectorAll(`#${question} .quiz-option`);
-            options.forEach(opt => opt.classList.remove('selected'));
-            
-            option.classList.add('selected');
-            
-            respostas[question] = option.textContent;
+       const respostas = {};
+
+function selectOption(option, question) {
+    const options = document.querySelectorAll(`#${question} .quiz-option`);
+    options.forEach(opt => opt.classList.remove('selected'));
+    
+    option.classList.add('selected');
+    respostas[question] = option.textContent;
+}
+
+function calcularResultadoQuiz() {
+    const questions = document.querySelectorAll('.quiz-question');
+    let todasRespondidas = true;
+    let unansweredQuestions = [];
+    
+    // Verifica todas as perguntas
+    questions.forEach(q => {
+        if (!respostas[q.id]) {
+            todasRespondidas = false;
+            unansweredQuestions.push(q.id);
+            q.style.border = "2px solid red";
+        } else {
+            q.style.border = "none";
         }
+    });
+    
+    if (!todasRespondidas) {
+        alert(`Por favor, responda todas as perguntas. Faltam: ${unansweredQuestions.length}`);
+        return;
+    }
+    
+    let tropical = 0, rustico = 0, zen = 0, minimalista = 0;
+    
+    // Calcula pontos com correspondência mais flexível
+    for (const [pergunta, resposta] of Object.entries(respostas)) {
+        const respostaLower = resposta.toLowerCase();
         
-        function calcularResultadoQuiz() {
-            const questions = document.querySelectorAll('.quiz-question');
-            let todasRespondidas = true;
-            
-            questions.forEach(q => {
-                if (!respostas[q.id]) {
-                    todasRespondidas = false;
-                }
-            });
-            
-            if (!todasRespondidas) {
-                alert("Por favor, responda todas as perguntas antes de ver o resultado.");
-                return;
-            }
-            
-            let tropical = 0, rustico = 0, zen = 0, minimalista = 0;
-            
-            for (const [pergunta, resposta] of Object.entries(respostas)) {
-                if (resposta.includes("tropical") || resposta.includes("vibrantes") || resposta.includes("exóticas") || resposta.includes("floridas")) {
-                    tropical++;
-                }
-                
-                if (resposta.includes("rústica") || resposta.includes("campo") || resposta.includes("terrosos") || resposta.includes("madeira") || resposta.includes("ervas")) {
-                    rustico++;
-                }
-                
-                if (resposta.includes("zen") || resposta.includes("meditação") || resposta.includes("relaxamento") || resposta.includes("água") || resposta.includes("harmonioso")) {
-                    zen++;
-                }
-                
-                if (resposta.includes("moderno") || resposta.includes("minimalista") || resposta.includes("monocromático") || resposta.includes("poucas cores") || resposta.includes("limpas")) {
-                    minimalista++;
-                }
-            }
-            
-            // Determinar o estilo com maior pontuação
-            const estilos = [
-                {nome: "Tropical", pontos: tropical},
-                {nome: "Rústico", pontos: rustico},
-                {nome: "Zen", pontos: zen},
-                {nome: "Minimalista", pontos: minimalista}
-            ];
-            
-            estilos.sort((a, b) => b.pontos - a.pontos);
-            const estiloVencedor = estilos[0].nome.toLowerCase();
-            
-            // Exibir resultado
-            document.getElementById('estilo-jardim').textContent = estilos[0].nome;
-            
-            // Esconder todos os estilos primeiro
-            document.querySelectorAll('.garden-style').forEach(style => {
-                style.style.display = 'none';
-            });
-            
-            // Mostrar apenas o estilo vencedor
-            document.getElementById(estiloVencedor).style.display = 'block';
-            document.getElementById('quiz-result').style.display = 'block';
-            
-            // Rolagem suave para o resultado
-            document.getElementById('quiz-result').scrollIntoView({behavior: 'smooth'});
+        if (/tropical|vibrantes|exóticas|floridas|palmeiras/i.test(respostaLower)) {
+            tropical++;
         }
+        if (/rústica|rustica|campo|terrosos|madeira|ervas|lavanda|alecrim|hortênsia|hortensia/i.test(respostaLower)) {
+            rustico++;
+        }
+        if (/zen|meditação|meditacao|relaxamento|água|agua|harmonioso/i.test(respostaLower)) {
+            zen++;
+        }
+        if (/moderno|minimalista|monocromático|monocromatico|poucas cores|limpas/i.test(respostaLower)) {
+            minimalista++;
+        }
+    }
+    
+    // Determina o estilo vencedor
+    const estilos = [
+        {nome: "tropical", pontos: tropical},
+        {nome: "rustico", pontos: rustico},
+        {nome: "zen", pontos: zen},
+        {nome: "minimalista", pontos: minimalista}
+    ];
+    
+    estilos.sort((a, b) => b.pontos - a.pontos);
+    const estiloVencedor = estilos[0].nome;
+    
+    // Atualiza a UI
+    document.getElementById('estilo-jardim').textContent = estilos[0].nome.charAt(0).toUpperCase() + estilos[0].nome.slice(1);
+    
+    // Esconde todos os estilos primeiro
+    document.querySelectorAll('.garden-style').forEach(style => {
+        style.style.display = 'none';
+    });
+    
+    // Mostra apenas o estilo vencedor
+    const elementoResultado = document.getElementById(estiloVencedor);
+    if (elementoResultado) {
+        elementoResultado.style.display = 'block';
+    } else {
+        console.error('Elemento não encontrado:', estiloVencedor);
+    }
+    
+    // Garante que o resultado seja visível
+    const quizResult = document.getElementById('quiz-result');
+    if (quizResult) {
+        quizResult.style.display = 'block';
+        quizResult.scrollIntoView({behavior: 'smooth'});
+    }
+}
+
+console.log("Pontuação final:", {
+    tropical,
+    rustico, 
+    zen,
+    minimalista
+});
     </script>
 </body>
 </html>

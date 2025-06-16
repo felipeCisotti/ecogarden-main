@@ -15,7 +15,7 @@ body {
     background: #f9f9f9;
 }
 
-/* Cabeçalho */
+
 header {
     background-color: var(--verde-escuro);
     color: white;
@@ -34,7 +34,7 @@ header {
     max-width: 90%;
 }
 
-/* Menu */
+
 nav {
     background-color: var(--verde-claro);
     padding: 0.5rem 0;
@@ -128,7 +128,7 @@ button {
 
 button:hover {
     background-color: var(--bege);
-    color: var(--verde-claro);
+    color: #4A5C24;
 }
 
 /* Resultado */
@@ -219,6 +219,8 @@ button:hover {
     height: 100%;
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius:15px;
+    border: 2px solid var(--verde-claro);
 }
 
 .resul-texto {
