@@ -832,7 +832,72 @@ details p {
   transition: all .5s ease;
 }
 
-.icons img:hover {
-  transform: translateY(-7px);
-  transition: all .5s ease;
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* diminui o espaçamento geral */
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* permite quebra de linha no mobile */
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  flex-direction: row; /* desktop: lado a lado */
+}
+
+.icon-link img {
+  width: 60px;
+  transition: transform 0.3s ease;
+}
+
+.icon-link span {
+  margin-left: -20px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  color: #717336;
+  font-weight: bold;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.icon-link:hover img {
+  transform: translateX(-8px);
+}
+
+.icon-link:hover span {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsivo: no mobile coloca o texto embaixo e sem efeito */
+@media (max-width: 768px) {
+  .icon-link {
+    flex-direction: column; /* agora fica um em cima do outro */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-link img {
+    transform: none !important;
+  }
+
+  .icon-link span {
+    margin-left: 0;
+    margin-top: 8px;
+    opacity: 1;
+    transform: none;
+  }
 }
