@@ -514,6 +514,7 @@ header {
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      height: 500px;
     }
 
     /* Left (Image) */
@@ -521,7 +522,6 @@ header {
       flex: 1;
       background-size: cover;
       background-position: center;
-      min-height: 300px;
     }
 
     /* Right (Content) */
