@@ -177,6 +177,10 @@ h3 {
   .botoes-meses {
     gap: 6px;
   }
+
+  .plantas-mes{
+    margin-left: -12px;
+  }
 }
 
 .footer-bottom {
