@@ -237,6 +237,9 @@ button:hover {
         height: 60px;
     }
 
+    nav{
+        margin-top: 20px;
+    }
     nav ul li {
         margin: 0 0.5rem;
     }
